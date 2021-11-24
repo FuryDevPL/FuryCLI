@@ -1,0 +1,2 @@
+# ✨FuryCLI✨ #
+Builded using 🐍Python🐍
