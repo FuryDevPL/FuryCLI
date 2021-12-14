@@ -9,3 +9,11 @@ Builded with 🐍Python🐍
 
 ## List of commands ##
 
+cmds => shows command list
+exit => turns off program
+sysinfo => system informations
+browser => opens default web browser
+discord => opens Discord
+spotify => opens Spotify
+ytmp3 => Youtube mp3 downloader 
+
