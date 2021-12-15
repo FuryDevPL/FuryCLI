@@ -14,9 +14,6 @@ from colorama import Fore, Back, Style
 
 
 
-
-
-
 init()
 pretty.install()
 console = Console()
@@ -51,11 +48,11 @@ def save_log():
 
 def jutub():
 
-    video_url = input("Wpisz adres URL filmu:" )
+    video_url = input("Type video adress: " )
     video_info = youtube_dl.YoutubeDL().extract_info(
         url = video_url,download=False
     )
-    filename = f"Download/{video_info['title']}.mp3"
+    filename = f"{video_info['title']}.mp3"
     options={
         'format':'bestaudio/best',
         'keepvideo':False,
@@ -65,11 +62,11 @@ def jutub():
     with youtube_dl.YoutubeDL(options) as ydl:
         ydl.download([video_info['webpage_url']])
 
-    print("Pobieranie ukończone... Zapisano w folderze FuryCLI/Download => {}".format(filename))
+    print("Completed... Saved file in FuryCLI folder => {}".format(filename))
 
 
 
-logaj("Uruchamianie...")
+logaj("Starting FuryCLI...")
 
 
 #komendy
@@ -86,9 +83,6 @@ def cmds():
     print("List of commands")
     for komenda, desc in cmd.items():
         print(Fore.GREEN + komenda + Fore.BLUE + desc + "\n")
-
-
-
 
  
 
@@ -128,36 +122,41 @@ For help, type <cmds>
 print("")
 print("")
 print("")
-
-logaj("Uruchomiono")
+p = ""   
+logaj("Started FuryCLI")
 
 while txt != "exit":
     txt = input("-$ ")
     logaj("Czekam na polecenia...")
     print("")
     if txt == "cmds":
-        logaj("Typed cmds...")
+        logaj("Using " + txt)
         cmds()
-        logaj("cmds command completed")
+        logaj("Completed " + txt)
     elif txt == "sysinfo":
+        logaj("Using " + txt)
         getSystemInfo()
-        logaj("Wykonano sysinfo")
+        logaj("Completed " + txt)
     elif txt == "exit":
-        logaj("Zamknięto program (komenda exit)")
+        logaj("Completed " + txt)
     elif txt == "browser":
         webbrowser.open_new_tab("https://www.google.com")
+        print("Done!")
+        logaj("Completed " + txt)
     elif txt == "discord":
-        logaj("Wywołano discord")
+        logaj("Using " + txt)
         os.system('start Discord:')
-        logaj("Wykonano discord")
+        logaj("Completed " + txt)
+        print("Done!")
     elif txt == "spotify":
-        logaj("Wywołano spotify")
+        logaj("Using " + txt)
         os.system('start Spotify:')
-        logaj("Wykonano spotify")
+        logaj("Completed " + txt)
+        print("Done!")
     elif txt == "ytmp3":
-        logaj("Wywołano ytmp3")
+        logaj("Using " + txt)
         jutub()
-        logaj("Wykonano ytmp3")
+        logaj("Completed " + txt)
 
 
 
