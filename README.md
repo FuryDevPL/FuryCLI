@@ -23,3 +23,10 @@ spotify => opens Spotify
 
 ytmp3 => Youtube mp3 downloader 
 
+## Installation ##
+
+First install requirements.txt 
+
+```pip install -r /path/to/requirements.txt```
+
+
