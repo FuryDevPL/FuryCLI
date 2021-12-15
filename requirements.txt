@@ -1,0 +1,5 @@
+colorama==0.4.4
+gpuinfo==1.0.0a7
+rich==10.16.1
+WMI==1.5.1
+youtube_dl==2021.6.6
