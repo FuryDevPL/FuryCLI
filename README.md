@@ -29,4 +29,7 @@ First install requirements.txt
 
 ```pip install -r /path/to/requirements.txt```
 
+You can use FuryCLI using
+
+```py /path/to/FuryCLI.py```
 
